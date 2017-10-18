@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0.1">
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <random>
+                <li>RESP$Hi, human !</li>
+                <li>RESP$Hello UVA student !</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT TIME IS IT</pattern>
+        <template>RESP$The local time is:
+            <system>date</system>
+        </template>
+    </category>
+    <category>
+        <pattern>WHEN DOES * MEET</pattern>
+        <template>
+            CMD$meet <star index="1"/> <star index="2"/>
+        </template>
+    </category>
+    <category>
+        <pattern>HOW MANY AVAILABLE SEATS IN *</pattern>
+        <template>
+             CMD$available <star index="1"/> <star index="2"/>
+        </template>
+    </category>
+    <category>
+        <pattern>WHAT IS * ABOUT</pattern>
+        <template>
+             CMD$about <star index="1"/> <star index="2"/>
+        </template>
+    </category>
+</aiml>
